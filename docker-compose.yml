@@ -1,0 +1,10 @@
+version: "3"
+services:
+  jekyll:
+    build: .
+    environment:
+      - DOCS=${DOCS}
+    volumes:
+      - ${REPOSITORY}:/repo
+    ports:
+      - "4000:4000"
