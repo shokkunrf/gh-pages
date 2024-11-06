@@ -3,6 +3,7 @@ services:
   jekyll:
     build: .
     environment:
+      - NOJEKYLL=${NOJEKYLL}
       - DOCS=${DOCS}
     volumes:
       - ${REPOSITORY}:/repo
